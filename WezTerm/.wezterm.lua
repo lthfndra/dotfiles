@@ -28,7 +28,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	left = 15,
 	right = 15,
-	top = 10,
+	top = 20,
 	bottom = 5,
 }
 
@@ -46,14 +46,13 @@ config.keys = {
 	},
 }
 
-config.color_scheme = 'Dracula (Official)'
+config.color_scheme = 'Poimandres Storm'
 config.colors = {
 	-- background = "#12151B", -- lighter gray
-   -- background = "#0D0D0D", -- darker gray
-    background = "#000", -- pure black
-    cursor_bg = "#9B96B5",
-	cursor_fg = "#1a1a1e",
-	cursor_border = "#9B96B5",
+   background = "#0D0D0D", -- darker gray
+   -- background = "#000", -- pure black
+   -- cursor_bg = "#9B96B5",
+	-- cursor_fg = "#1a1a1e",
+	-- cursor_border = "#9B96B5",
 }
 return config
-
