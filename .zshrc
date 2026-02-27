@@ -23,16 +23,29 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-#JAVA & ANDROID PATH
+# JAVA & ANDROID PATH
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export PATH="$JAVA_HOME/bin:$PATH"
-export ANDROID_HOME="/Users/lthfndra/Library/Android/sdk"
-export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+
+# --- ANDROID SDK CONFIG (FIXED) ---
+export ANDROID_HOME="$HOME/android-sdk"
+# Baris ini yang memperbaiki error "Cannot find AVD system path":
+export ANDROID_SDK_ROOT="$ANDROID_HOME" 
+
+# Menambahkan tools ke PATH
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+fpath+=/opt/homebrew/share/zsh/site-functions
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GEMINI_API_KEY="AIzaSyCKK2v5H2xik1EGEYi_1YcWMZ92rxVzggs"
+
+# Added by Antigravity
+export PATH="/Users/lthfndra/.antigravity/antigravity/bin:$PATH"

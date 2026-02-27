@@ -54,11 +54,11 @@ format = "at $output"
 symbol = "[](black) "
 # format =  ' [$symbol$branch(:$remote_branch)]($style)[]'
 style = "bold fg:pink bg:black"
-format =  '  on [$symbol$branch]($style)[](black)'
+format =  '  on [$symbol$branch]($style)[ ](black)'
 
 [git_status]
 style = 'bold fg:hotred'
-format = ' [($all_status$ahead_behind )]($style)'
+format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
 symbol = ""
@@ -179,4 +179,4 @@ darkergray = "#767c9d"
 bluishgray = "#506477"
 #offWhite = "#e4f0fb"
 #white = "#ffffff"
-#black = "#000000"
+black = "#45475a"
