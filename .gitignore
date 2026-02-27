@@ -1,5 +1,6 @@
 # Google Cloud secrets
 gcloud/
+configstore/
 
 # Folder SSH (Sangat rahasia!)
 .ssh/
