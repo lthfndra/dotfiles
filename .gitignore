@@ -1,0 +1,12 @@
+# Google Cloud secrets
+gcloud/
+
+# Folder SSH (Sangat rahasia!)
+.ssh/
+
+# Folder riwayat (bisa mengandung password yang pernah diketik)
+.zsh_history
+.bash_history
+
+# File macOS
+.DS_Store
