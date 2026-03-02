@@ -28,14 +28,76 @@ truncate_to_repo = false
 "Pictures" = " "
 "Developer" = "󰲋 "
 
+[custom.giturl]
+# disabled = true
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+format = "at $output"
+
 [git_branch]
-symbol = " "
-style = "fg:blue" # Biru dingin khas Poimandres
-format = "on [$symbol$branch]($style) "
+symbol = "[](black) "
+style = "bold fg:blue bg:black" # Biru dingin khas Poimandres
+format = "  on [$symbol$branch]($style)[ ](black)"
 
 [git_status]
 style = "fg:pink" # Menggunakan aksen pink/magenta untuk status
-format = "([$all_status$ahead_behind]($style))"
+format = "[($all_status$ahead_behind )]($style)"
+
+[nodejs]
+symbol = ""
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+format = '[[ $symbol( $version) ]]($style)'
+
+[rust]
+symbol = ""
+format = '[[ $symbol( $version) ]]($style)'
+
+[golang]
+symbol = ""
+format = '[ $symbol( $version) ]($style)'
+detect_files = ["go.mod"]
+
+[php]
+symbol = ""
+format = '[[ $symbol( $version) ]]($style)'
+
+[java]
+symbol = " "
+format = '[[ $symbol( $version) ]]($style)'
+
+[kotlin]
+symbol = ""
+format = '[[ $symbol( $version) ]]($style)'
+
+[haskell]
+symbol = ""
+format = '[[ $symbol( $version) ]]($style)'
+
+[python]
+symbol = ""
+format = '[[ $symbol( $version) ]]($style)'
+
+[docker_context]
+symbol = ""
+format = '[ $symbol( $context) ]($style)'
 
 [character]
 success_symbol = "[](bold green)"
@@ -50,5 +112,3 @@ pink = "#f087bd"
 green = "#5de4c7"
 red = "#d0679d"
 brightmint = "#5de4c7"
-
-
