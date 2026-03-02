@@ -1,16 +1,25 @@
 # --- Font (Sesuai WezTerm Anda) ---
 font-family = "MesloLGS Nerd Font"
-font-style = Bold
-font-size = 13
+#font-style = Bold
+font-size = 14
 font-feature = "calt=0"
 
 # --- Window & Appearance ---
 background = 252b37
 background-opacity = 0.75
 background-blur-radius = 10
-window-padding-x = 15
-window-padding-y = 20
+window-padding-x = 10
+window-padding-y = 5
 window-decoration = true
+macos-icon-ghost-color = #a6accd
+adjust-cell-height = 20%
+#window-save-state = always
+window-colorspace = display-p3
+
+# Mouse & Interaction
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+confirm-close-surface = false
 
 # --- Cursor ---
 cursor-style = bar

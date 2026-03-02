@@ -51,9 +51,4 @@ green = "#5de4c7"
 red = "#d0679d"
 brightmint = "#5de4c7"
 
-[custom.giturl]
-description = "Display current git remote URL"
-command = "git remote get-url origin 2>/dev/null | sed 's/https:\\/\\///' | sed 's/git@//' | sed 's/\\.git//'"
-when = "git rev-parse --is-inside-work-tree 2>/dev/null"
-style = "fg:8"
-format = "at [$output]($style) "
+
